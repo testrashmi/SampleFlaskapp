@@ -20,7 +20,7 @@ set -ex
 export REGISTRY=${REGISTRY:-ibmcom}
 
 # Create the app
-ibmcloud ce app create -n application-flask --image ${REGISTRY}/flask
+ibmcloud ce app create -n application-flask --image jp.icr.io/codeengine-dummy-5698/flask
 
 # Get the URL of the app for later use
 URL=$(ibmcloud ce app get -n application-flask -o url)
